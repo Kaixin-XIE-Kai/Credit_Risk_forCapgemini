@@ -1,0 +1,24 @@
+cat <<EOT >> .gitignore
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.env
+.venv/
+env/
+
+# Data (重要！永远不要上传大CSV到git)
+data/raw/*
+data/processed/*
+data/output/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/output/.gitkeep
+
+# Mac
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+EOT
